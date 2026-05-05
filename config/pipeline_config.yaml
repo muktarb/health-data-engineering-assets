@@ -1,0 +1,48 @@
+# Health Data ETL Pipeline Configuration
+# =======================================
+
+# Data sources
+sources:
+  - name: chronic_disease_indicators
+    path: data/raw/chronic_disease_sample.csv
+    format: csv
+
+# Output
+output_dir: data/processed
+log_dir: logs
+
+# Validation rules
+validation:
+  required_columns:
+    - region
+    - year
+    - age
+    - sex
+    - condition
+    - case_count
+    - population
+  null_threshold_pct: 5
+  unique_keys:
+    - region
+    - year
+    - age
+    - sex
+    - condition
+  drop_duplicates: true
+  range_checks:
+    - column: age
+      min: 0
+      max: 120
+    - column: year
+      min: 2000
+      max: 2026
+    - column: case_count
+      min: 0
+
+# Transformation settings
+transformations:
+  age_column: age
+  sex_column: sex
+  rate_calculation:
+    count: case_count
+    population: population
