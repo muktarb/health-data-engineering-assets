@@ -2,6 +2,11 @@
 
 A modular, production-ready ETL (Extract, Transform, Load) pipeline for processing population health surveillance data using Python and SQL. Designed for epidemiological analysis, data warehousing, and integration into BI reporting workflows.
 
+---
+Author: Muktar Ahmed, PhD | Postdoctoral Research Fellow, Flinders University  
+Contact: Muktar.Ahmed@flinders.edu.au
+---
+
 ## Overview
 
 This project demonstrates a complete data engineering workflow for health data:
