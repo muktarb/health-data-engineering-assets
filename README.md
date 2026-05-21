@@ -83,7 +83,7 @@ health-data-etl-pipeline/
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR-USERNAME/health-data-etl-pipeline.git
+git clone https://github.com/muktarb/health-data-etl-pipeline.git
 cd health-data-etl-pipeline
 
 # Install dependencies
